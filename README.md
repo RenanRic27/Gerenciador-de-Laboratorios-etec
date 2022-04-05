@@ -1,1 +1,1 @@
-# Gerenciador-de-Laboratorios-etec
+# Gerenciador-de-Rifas-etec
