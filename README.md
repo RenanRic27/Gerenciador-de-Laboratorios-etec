@@ -1,1 +1,1 @@
-# Gerenciador-de-Rifas-etec
+# sistema-rifa
