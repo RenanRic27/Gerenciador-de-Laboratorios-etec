@@ -1,1 +1,1 @@
-# main-project
+# Gerenciador de rifas
