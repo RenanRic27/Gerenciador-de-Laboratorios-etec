@@ -18,10 +18,11 @@ $(document).ready(function() {
             data: ID,
             url: 'src/comprador/modelo/view-comprador.php',
             success: function(dado) {
-                if (dado.comprador == "success") {
+                if (dado.tipo == "success") {
                     $('.modal-body').load('src/comprador/visao/form-comprador.html', function() {
                         $('#NOME').val(dado.dados.NOME)
                         $('#ID').val(dado.dados.ID)
+                        $('#CELULAR').val(dado.dados.CELULAR)
                     })
                     $('.btn-save').removeAttr('data-operation', 'insert')
                     $('.btn-save').show()
@@ -30,7 +31,7 @@ $(document).ready(function() {
                     Swal.fire({
                         title: 'e-rifa',
                         text: dado.mensagem,
-                        type: dado.comprador,
+                        type: dado.tipo,
                         confirmButtonText: 'OK'
                     })
                 }

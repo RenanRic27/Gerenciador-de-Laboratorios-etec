@@ -33,7 +33,7 @@
             } catch(PDOException $e) {
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível efetuar o cadastro do curso.'
+                    "mensagem" => 'Não foi possível efetuar o cadastro do usuario.'
                 );
             }
         } else {
@@ -51,7 +51,7 @@
             } catch (PDOException $e) {
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível efetuar o alteração do registro.'
+                    "mensagem" => 'Não foi possível efetuar a alteração do registro.'
                 );
             }
         }

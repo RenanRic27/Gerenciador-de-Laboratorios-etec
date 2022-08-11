@@ -1,19 +1,19 @@
 $(document).ready(function() {
-    $('#table-comprador').on('click', 'button.btn-delete', function(e) {
 
+    $('#table-vendedor').on('click', 'button.btn-delete', function(e) {
 
-        e.preventDefault();
+        e.preventDefault()
 
         let ID = `ID=${$(this).attr('id')}`
 
         Swal.fire({
             title: 'e-rifa',
-            text: 'Deseja realmente excluir esse registro?',
+            text: "Deseja realmente excluir esse registro?",
             icon: 'question',
             showCancelButton: true,
-            confirmButton: 'sim',
+            confirmButtonText: 'Sim',
             cancelButtonText: 'Não'
-        }).then((result => {
+        }).then((result) => {
             if (result.value) {
 
                 $.ajax({
@@ -21,7 +21,7 @@ $(document).ready(function() {
                     dataType: 'json',
                     assync: true,
                     data: ID,
-                    url: 'src/comprador/modelo/delete-comprador.php',
+                    url: 'src/vendedor/modelo/delete-vendedor.php',
                     success: function(dados) {
                         Swal.fire({
                             title: 'e-rifa',
@@ -30,11 +30,12 @@ $(document).ready(function() {
                             confirmButtonText: 'OK'
                         })
 
-                        $('#table-comprador').DataTable().ajax.reload()
+                        $('#table-vendedor').DataTable().ajax.reload()
                     }
                 })
-            }
-        }))
 
+
+            }
+        })
     })
 })
