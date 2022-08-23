@@ -8,6 +8,7 @@ include('../../conexao/conn.php');
 
 while($resultado = $sql ->fetch(PDO::FETCH_ASSOC)){
     if($resultado['achou'] == 1){
+        session_start();
          $_SESSION['NOME'] = $resultado['NOME'];
          $_SESSION['TIPO'] = $resultado['TIPO_ID'];
          $dados = array(
